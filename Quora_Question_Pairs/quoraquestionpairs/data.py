@@ -12,6 +12,7 @@ def get_dataset(file: str, question: data.Field):
                                   ('question1', question),
                                   ('question2', question),
                                   ('is_duplicate', data.Field(sequential=False,
-                                                              use_vocab=False))],
+                                                              use_vocab=False,
+                                                              is_target=True))],
                                   skip_header=True)
     return dataset
