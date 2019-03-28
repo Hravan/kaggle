@@ -21,4 +21,4 @@ class RNNGRUSequential(RNNGRU):
         _, x = self.gru(concatenated)
 
         out = torch.sigmoid(self.out(x))
-        return out
+        return out.view(-1)
